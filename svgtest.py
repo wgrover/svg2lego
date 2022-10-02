@@ -1,6 +1,7 @@
+import sys
 import xml.etree.ElementTree as ET
 first_coordinate = True
-tree = ET.parse("test2.svg")
+tree = ET.parse(sys.argv[1])
 root = tree.getroot()
 for child in root:
     if "polyline" in child.tag or "polygon" in child.tag:
